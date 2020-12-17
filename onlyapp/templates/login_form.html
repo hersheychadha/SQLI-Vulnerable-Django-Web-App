@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style>
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: yellowgreen;
+}
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+    <center> <h1 style="color: white">  Login Form </h1> </center>
+    <form>
+        <div class="container">
+          <p> <center> <label style="color:white">Username : </label>
+            <input type="text" placeholder="Enter Username" name="username" >
+          </center> </p>
+          <p><center>
+            <label style="color:white">Password : </label>
+            <input type="password" placeholder="Enter Password" name="password" >
+          </center></p>
+          <center>
+            <button type="submit">Login</button>
+          </center>
+        </div>
+    </form>
+    <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th> Salary </th>
+        <th> User Name </th>
+        <th> password </th>
+      <tr>
+    </thead>
+    <tbody>
+    {% for item in ans %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.position }}</td>
+        <td>{{ item.sal }}</td>
+        <td>{{ item.user_name }}</td>
+        <td>{{ item.password }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
